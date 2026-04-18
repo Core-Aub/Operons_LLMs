@@ -164,7 +164,7 @@ python3 serialize_gene_pairs.py \
   Data/features/extracted_features/conservation_scores.tsv \
   Data/features/extracted_features/string_scores.csv \
   Data/generated_datasets/ECOLI/ecoli_function_family_conservation_string.csv
-
+```
 ### References
 
 [1] Operon DataBase (ODB):  
