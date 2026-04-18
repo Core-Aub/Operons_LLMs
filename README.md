@@ -146,6 +146,24 @@ python3 serialize_gene_pairs.py <genome_dir> <gc.csv> <labels.csv> <function> <f
 - `<output.csv>`  
   Desired output file path.
 
+### Example
+
+To regenerate the dataset file:
+
+`Data/generated_datasets/ECOLI/ecoli_function_family_conservation_string.csv`
+
+using the available input files, run the following command:
+
+```bash
+python3 serialize_gene_pairs.py \
+  Data/features/patric_features \
+  Data/features/extracted_features/GC_ratio.csv \
+  Data/main_dataset/LOSO_ecoli.csv \
+  1 \
+  1 \
+  Data/features/extracted_features/conservation_scores.tsv \
+  Data/features/extracted_features/string_scores.csv \
+  Data/generated_datasets/ECOLI/ecoli_function_family_conservation_string.csv
 
 ### References
 
