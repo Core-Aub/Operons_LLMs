@@ -87,6 +87,29 @@ The notebooks were written for Google Colab, but they also run locally.
 pip install -U transformers datasets evaluate torch scikit-learn pandas numpy matplotlib
 ```
 ## 2) Script Usage (`serialize_gene_pairs.py`)
+### Input Requirements
+
+- `<genome_dir>`  
+  Directory containing genome annotation files in `PATRIC.features.tab` format.
+
+- `<labels.csv>`  
+  CSV file containing gene pairs (PEG IDs) along with their corresponding labels  
+  (`1` for operon pairs, `0` for non-operon pairs).
+
+- `<gc.csv>`  
+  CSV file containing the GC ratio for each gene (identified by `peg_id`).
+
+- `<conservation.tsv>` *(optional)*  
+  Tab-separated file containing conservation scores for gene pairs  
+  (identified by `PGF_id` for each gene).
+
+- `<string.csv>` *(optional)*  
+  CSV file containing STRING interaction scores for gene pairs  
+  (identified by `peg_id` for each gene).
+
+- `<codon.csv>`  
+  CSV file containing codon bias values for each gene (`peg_id`),  
+  stored as a dictionary of codon frequencies in the following format: `{"TTT": 1.565, "TTC": 0.435, "TTA": 2.108, ...}`
 
 To run the script:
 
