@@ -48,15 +48,15 @@ This repository contains code and data to reproduce the experiments from the pap
   - `main_dataset/`: Base labeled gene pairs.
     - `LOSO_bsubtilis.csv`  
       Used for the Leave-One-Species-Out (LOSO) training setting when testing on *Bacillus subtilis*.  
-      - Training positive examples are gathered from the Operon DataBase (ODB) [1].  
-      - Testing data for *Bacillus subtilis* are obtained from RegulonDB [2] and DBTBS [3].  
+      - Training positive examples are gathered from the Operon DataBase (ODB).  
+      - Testing data for *Bacillus subtilis* are obtained from RegulonDB and DBTBS.  
     - `LOSO_ecoli.csv`  
       Used for the Leave-One-Species-Out (LOSO) training setting when testing on *Escherichia coli*.  
-      - Training positive examples are gathered from the Operon DataBase (ODB) [1].  
-      - Testing data for *Escherichia coli* are obtained from RegulonDB [2] and DBTBS [3].  
+      - Training positive examples are gathered from the Operon DataBase (ODB).  
+      - Testing data for *Escherichia coli* are obtained from RegulonDB and DBTBS.  
     - `roundrobin.csv`  
       Used for the random split training setting.  
-      - All positive examples are gathered from the Operon DataBase (ODB) [1].
+      - All positive examples are gathered from the Operon DataBase (ODB) .
 
 ---
 
@@ -190,20 +190,5 @@ python3 serialize_gene_pairs.py \
   Data/features/extracted_features/string_scores.csv \
   Data/generated_datasets/ECOLI/ecoli_function_family_conservation_string.csv
 ```
-### References
 
-[1] Operon DataBase (ODB):  
-Pertea, M., Ayanbule, K., Smedinghoff, M., & Salzberg, S. L. (2009).  
-OperonDB: a comprehensive database of predicted operons in microbial genomes.  
-*Nucleic Acids Research*, 37(Database issue), D479–D482.
-
-[2] RegulonDB:  
-Santos-Zavaleta, A., et al. (2019).  
-RegulonDB v10.5: tackling challenges to unify classic and high throughput knowledge of gene regulation in *Escherichia coli* K-12.  
-*Nucleic Acids Research*, 47(D1), D212–D220.
-
-[3] DBTBS (Database of Transcriptional Regulation in *Bacillus subtilis*):  
-Sierro, N., et al. (2008).  
-DBTBS: a database of transcriptional regulation in *Bacillus subtilis*.  
-*Nucleic Acids Research*, 36(Database issue), D93–D96.
 
