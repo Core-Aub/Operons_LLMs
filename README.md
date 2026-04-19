@@ -87,10 +87,11 @@ The notebooks were written for Google Colab, but they also run locally.
 pip install -U transformers datasets evaluate torch scikit-learn pandas numpy matplotlib
 ```
 ## 2) Script Usage (`serialize_gene_pairs.py`)
+This script is primarily intended to reproduce the experimental datasets.
 ### Input Requirements
 
 - `<genome_dir>`  
-  Directory containing genome annotation files in `PATRIC.features.tab` format.
+  Directory containing genome annotation files in `PATRIC.features.tab` format (BV-BRC annotation export).
 
 - `<labels.csv>`  
   CSV file containing gene pairs (PEG IDs) along with their corresponding labels  
@@ -110,6 +111,30 @@ pip install -U transformers datasets evaluate torch scikit-learn pandas numpy ma
 - `<codon.csv>`  
   CSV file containing codon bias values for each gene (`peg_id`),  
   stored as a dictionary of codon frequencies in the following format: `{"TTT": 1.565, "TTC": 0.435, "TTA": 2.108, ...}`
+> **Note:** `labels.csv` is only required for training or reproducing experiments. It is not required for inference on new genomes.
+
+### Applying the Method to a New Genome
+
+To apply the method to a new genome, the minimum required inputs are:
+
+- Genome annotation file in `PATRIC.features.tab` format (BV-BRC annotation export)
+- Genome sequence file *(if needed for GC computation)*
+
+From these inputs, the following features can be computed:
+
+- Gene length
+- Intergenic distance
+- Strand orientation
+- GC content difference
+
+Optional features can also be added if available:
+
+- Functional annotations
+- Protein family assignments (PGFAM)
+- Conservation scores *(precomputed across reference genomes)*
+- STRING interaction scores
+
+If optional features are not provided, the model can still operate using sequence-derived features alone.
 
 To run the script:
 
