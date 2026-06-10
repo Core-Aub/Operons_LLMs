@@ -6,9 +6,21 @@
 </p>
 
 # Reference
--To be added when published 
+If you find this work useful, please cite our paper:
 
-Please cite this paper if you find our work useful.
+@article{10.1093/bioadv/vbag140,
+    author = {Assaf, Rida and Fakhri, Basel},
+    title = {Transformer-based operon prediction using textual representations of gene pairs},
+    journal = {Bioinformatics Advances},
+    volume = {6},
+    number = {1},
+    pages = {vbag140},
+    year = {2026},
+    month = {01},
+    issn = {2635-0041},
+    doi = {10.1093/bioadv/vbag140},
+    url = {https://doi.org/10.1093/bioadv/vbag140}
+}
 
 # Description
 This repository contains code and data to reproduce the experiments from the paper **"Transformer-Based Operon Prediction Using Textual Representations of Gene Pairs"**.
